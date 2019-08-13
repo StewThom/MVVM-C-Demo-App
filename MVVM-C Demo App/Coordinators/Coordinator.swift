@@ -8,32 +8,43 @@
 
 import UIKit
 
+enum StoryboardRef: String {
+    case Home
+    case Login
+}
+
+protocol TransitionRef {}
+
 class Coordinator {
     weak var parent: Coordinator?
     var children: [Coordinator] = []
     private(set) var rootViewController: UIViewController
     
-    init(rootViewController: UIViewController) {
+    init<T: ModeledViewController>(rootViewController: T) {
         self.rootViewController = rootViewController
+        if let viewModel = rootViewController.viewModel as? ViewModel {
+            viewModel.coordinator = self
+        }
     }
-}
-
-extension Coordinator {
     
-    func present(_ child: Coordinator, completion: (() -> Void)? = nil) {
+    func transition(_ transition: TransitionRef) {
+        fatalError("Transition method to be added to Coordinator Subclass")
+    }
+
+    final func present(_ child: Coordinator, completion: (() -> Void)? = nil) {
         child.parent = self
         self.children.append(child)
         rootViewController.present(child.rootViewController, animated: true, completion: completion)
     }
     
-    func dismiss(completion: (() -> Void)? = nil) {
+    final func dismiss(completion: (() -> Void)? = nil) {
         rootViewController.dismiss(animated: true) {
             self.parent?.remove(self)
             completion?()
         }
     }
     
-    func remove(_ child: Coordinator) {
+    final func remove(_ child: Coordinator) {
         children = children.filter( { $0 !== child } )
     }
 }

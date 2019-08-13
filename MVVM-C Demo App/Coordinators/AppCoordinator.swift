@@ -8,10 +8,33 @@
 
 import UIKit
 
+enum HomeTransitionRef: TransitionRef {
+    case Login
+}
+
 class AppCoordinator: Coordinator {
     
     init() {
-        super.init(rootViewController: UIViewController())
-        rootViewController.view.backgroundColor = .red
+        let viewController = HomeViewController.instantiateFromStoryboard(storyboard: .Home, with: HomeViewModel())
+        super.init(rootViewController: viewController)
+    }
+    
+    override func transition(_ transition: TransitionRef) {
+        guard let transition = transition as? HomeTransitionRef else {
+            return
+        }
+        
+        switch transition {
+        case .Login:
+            login()
+        }
+    }
+}
+
+extension AppCoordinator {
+    
+    func login() {
+        let loginCoordinator = LoginCoordinator()
+        present(loginCoordinator)
     }
 }
