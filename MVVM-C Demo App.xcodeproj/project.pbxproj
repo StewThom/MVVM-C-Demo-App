@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		104320B0230349EA00A19F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104320AF230349EA00A19F3C /* AppDelegate.swift */; };
-		104320B2230349EA00A19F3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104320B1230349EA00A19F3C /* ViewController.swift */; };
-		104320B5230349EA00A19F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104320B3230349EA00A19F3C /* Main.storyboard */; };
+		104320B2230349EA00A19F3C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104320B1230349EA00A19F3C /* HomeViewController.swift */; };
+		104320B5230349EA00A19F3C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104320B3230349EA00A19F3C /* Home.storyboard */; };
 		104320B7230349EB00A19F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 104320B6230349EB00A19F3C /* Assets.xcassets */; };
 		104320BA230349EB00A19F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104320B8230349EB00A19F3C /* LaunchScreen.storyboard */; };
 		104320C5230349EB00A19F3C /* MVVM_C_Demo_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104320C4230349EB00A19F3C /* MVVM_C_Demo_AppTests.swift */; };
 		104320D0230349EB00A19F3C /* MVVM_C_Demo_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104320CF230349EB00A19F3C /* MVVM_C_Demo_AppUITests.swift */; };
+		104320E523034ADD00A19F3C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104320E423034ADD00A19F3C /* Coordinator.swift */; };
+		104320E823034D1200A19F3C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104320E723034D1200A19F3C /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +38,8 @@
 /* Begin PBXFileReference section */
 		104320AC230349EA00A19F3C /* MVVM-C Demo App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-C Demo App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		104320AF230349EA00A19F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		104320B1230349EA00A19F3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		104320B4230349EA00A19F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		104320B1230349EA00A19F3C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		104320B4230349EA00A19F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		104320B6230349EB00A19F3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		104320B9230349EB00A19F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		104320BB230349EB00A19F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		104320CB230349EB00A19F3C /* MVVM-C Demo AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM-C Demo AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		104320CF230349EB00A19F3C /* MVVM_C_Demo_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_C_Demo_AppUITests.swift; sourceTree = "<group>"; };
 		104320D1230349EB00A19F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		104320E423034ADD00A19F3C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		104320E723034D1200A19F3C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,12 @@
 		104320AE230349EA00A19F3C /* MVVM-C Demo App */ = {
 			isa = PBXGroup;
 			children = (
-				104320AF230349EA00A19F3C /* AppDelegate.swift */,
-				104320B1230349EA00A19F3C /* ViewController.swift */,
-				104320B3230349EA00A19F3C /* Main.storyboard */,
-				104320B6230349EB00A19F3C /* Assets.xcassets */,
-				104320B8230349EB00A19F3C /* LaunchScreen.storyboard */,
-				104320BB230349EB00A19F3C /* Info.plist */,
+				104320DD230349F400A19F3C /* App */,
+				104320E623034CFD00A19F3C /* Coordinators */,
+				104320DE23034A1000A19F3C /* UI */,
+				104320E323034AB500A19F3C /* Protocols */,
+				104320E223034A6A00A19F3C /* Storyboards */,
+				104320E123034A5C00A19F3C /* Resources */,
 			);
 			path = "MVVM-C Demo App";
 			sourceTree = "<group>";
@@ -123,6 +127,72 @@
 				104320D1230349EB00A19F3C /* Info.plist */,
 			);
 			path = "MVVM-C Demo AppUITests";
+			sourceTree = "<group>";
+		};
+		104320DD230349F400A19F3C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				104320AF230349EA00A19F3C /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		104320DE23034A1000A19F3C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				104320DF23034A3400A19F3C /* Home */,
+				104320E023034A3E00A19F3C /* Login */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		104320DF23034A3400A19F3C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				104320B1230349EA00A19F3C /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		104320E023034A3E00A19F3C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		104320E123034A5C00A19F3C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				104320BB230349EB00A19F3C /* Info.plist */,
+				104320B6230349EB00A19F3C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		104320E223034A6A00A19F3C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				104320B8230349EB00A19F3C /* LaunchScreen.storyboard */,
+				104320B3230349EA00A19F3C /* Home.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		104320E323034AB500A19F3C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				104320E423034ADD00A19F3C /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		104320E623034CFD00A19F3C /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				104320E723034D1200A19F3C /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +301,7 @@
 			files = (
 				104320BA230349EB00A19F3C /* LaunchScreen.storyboard in Resources */,
 				104320B7230349EB00A19F3C /* Assets.xcassets in Resources */,
-				104320B5230349EA00A19F3C /* Main.storyboard in Resources */,
+				104320B5230349EA00A19F3C /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +326,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				104320B2230349EA00A19F3C /* ViewController.swift in Sources */,
+				104320E823034D1200A19F3C /* AppCoordinator.swift in Sources */,
+				104320B2230349EA00A19F3C /* HomeViewController.swift in Sources */,
 				104320B0230349EA00A19F3C /* AppDelegate.swift in Sources */,
+				104320E523034ADD00A19F3C /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,12 +365,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		104320B3230349EA00A19F3C /* Main.storyboard */ = {
+		104320B3230349EA00A19F3C /* Home.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				104320B4230349EA00A19F3C /* Base */,
 			);
-			name = Main.storyboard;
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 		104320B8230349EB00A19F3C /* LaunchScreen.storyboard */ = {
@@ -434,7 +506,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5UWSQZW25B;
-				INFOPLIST_FILE = "MVVM-C Demo App/Info.plist";
+				INFOPLIST_FILE = "MVVM-C Demo App/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +524,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5UWSQZW25B;
-				INFOPLIST_FILE = "MVVM-C Demo App/Info.plist";
+				INFOPLIST_FILE = "MVVM-C Demo App/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
