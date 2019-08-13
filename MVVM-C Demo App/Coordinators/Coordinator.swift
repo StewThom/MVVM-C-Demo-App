@@ -21,7 +21,9 @@ class Coordinator {
     private(set) var rootViewController: UIViewController
     
     init<T: ModeledViewController>(rootViewController: T) {
-        self.rootViewController = rootViewController
+        let navController = UINavigationController(rootViewController: rootViewController)
+        navController.setNavigationBarHidden(true, animated: false)
+        self.rootViewController = navController
         if let viewModel = rootViewController.viewModel as? ViewModel {
             viewModel.coordinator = self
         }
@@ -46,5 +48,11 @@ class Coordinator {
     
     final func remove(_ child: Coordinator) {
         children = children.filter( { $0 !== child } )
+    }
+    
+    final func show(_ viewController: UIViewController) {
+        if let navController = rootViewController as? UINavigationController {
+            navController.show(viewController, sender: self)
+        }
     }
 }

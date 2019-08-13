@@ -104,5 +104,54 @@
             </objects>
             <point key="canvasLocation" x="64" y="153"/>
         </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="HjC-Yq-YoZ">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" id="tIA-MU-lno" customClass="WelcomeViewController" customModule="MVVM_C_Demo_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H4V-71-P53">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcom back &lt;username&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42K-QS-zGm">
+                                <rect key="frame" x="20" y="441" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mv3-ez-ybW">
+                                <rect key="frame" x="20" y="787" width="374" height="45"/>
+                                <color key="backgroundColor" red="0.1017389878" green="0.64637531729999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="V00-Pi-la6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissPressed:" destination="tIA-MU-lno" eventType="touchUpInside" id="Q5z-Zr-GTV"/>
+                                    <action selector="loginPressed:" destination="xYc-nt-O7d" eventType="touchUpInside" id="TNk-zq-HGe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4tk-97-XYV" firstAttribute="trailing" secondItem="mv3-ez-ybW" secondAttribute="trailing" constant="20" id="0Nl-eD-3qR"/>
+                            <constraint firstItem="4tk-97-XYV" firstAttribute="trailing" secondItem="42K-QS-zGm" secondAttribute="trailing" constant="20" id="3aQ-6G-8am"/>
+                            <constraint firstItem="4tk-97-XYV" firstAttribute="bottom" secondItem="mv3-ez-ybW" secondAttribute="bottom" constant="30" id="EDF-1Q-Q6M"/>
+                            <constraint firstItem="42K-QS-zGm" firstAttribute="leading" secondItem="4tk-97-XYV" secondAttribute="leading" constant="20" id="WDS-B1-OlH"/>
+                            <constraint firstItem="42K-QS-zGm" firstAttribute="centerY" secondItem="4tk-97-XYV" secondAttribute="centerY" id="iXB-4Z-xim"/>
+                            <constraint firstItem="mv3-ez-ybW" firstAttribute="leading" secondItem="4tk-97-XYV" secondAttribute="leading" constant="20" id="jiK-cw-gp8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4tk-97-XYV"/>
+                    </view>
+                    <connections>
+                        <outlet property="welcomeBackLabel" destination="42K-QS-zGm" id="QpI-kQ-Ez7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U4B-Hh-183" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768" y="153"/>
+        </scene>
     </scenes>
 </document>

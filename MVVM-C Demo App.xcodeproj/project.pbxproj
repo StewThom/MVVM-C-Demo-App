@@ -25,6 +25,8 @@
 		104320F6230356F900A19F3C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104320F5230356F900A19F3C /* Login.storyboard */; };
 		104320F82303588600A19F3C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104320F72303588600A19F3C /* LoginViewModel.swift */; };
 		104320FB23035A7B00A19F3C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 104320FD23035A7B00A19F3C /* Localizable.strings */; };
+		1043210123035F2500A19F3C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043210023035F2500A19F3C /* WelcomeViewController.swift */; };
+		1043210323035F3A00A19F3C /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043210223035F3A00A19F3C /* WelcomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		104320F5230356F900A19F3C /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		104320F72303588600A19F3C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		104320FC23035A7B00A19F3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1043210023035F2500A19F3C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		1043210223035F3A00A19F3C /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				104320DF23034A3400A19F3C /* Home */,
-				104320E023034A3E00A19F3C /* Login */,
+				104320E023034A3E00A19F3C /* Login Flow */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -173,13 +177,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		104320E023034A3E00A19F3C /* Login */ = {
+		104320E023034A3E00A19F3C /* Login Flow */ = {
 			isa = PBXGroup;
 			children = (
-				104320F3230356AB00A19F3C /* LoginViewController.swift */,
-				104320F72303588600A19F3C /* LoginViewModel.swift */,
+				104320FE23035F0A00A19F3C /* Login */,
+				104320FF23035F1200A19F3C /* Welcome */,
 			);
-			path = Login;
+			path = "Login Flow";
 			sourceTree = "<group>";
 		};
 		104320E123034A5C00A19F3C /* Resources */ = {
@@ -220,6 +224,24 @@
 				104320F12303568700A19F3C /* LoginCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		104320FE23035F0A00A19F3C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				104320F3230356AB00A19F3C /* LoginViewController.swift */,
+				104320F72303588600A19F3C /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		104320FF23035F1200A19F3C /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				1043210023035F2500A19F3C /* WelcomeViewController.swift */,
+				1043210223035F3A00A19F3C /* WelcomeViewModel.swift */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +379,7 @@
 			files = (
 				104320E823034D1200A19F3C /* AppCoordinator.swift in Sources */,
 				104320B2230349EA00A19F3C /* HomeViewController.swift in Sources */,
+				1043210323035F3A00A19F3C /* WelcomeViewModel.swift in Sources */,
 				104320F82303588600A19F3C /* LoginViewModel.swift in Sources */,
 				104320EE23034F9500A19F3C /* ModeledViewController.swift in Sources */,
 				104320F0230350D900A19F3C /* HomeViewModel.swift in Sources */,
@@ -364,6 +387,7 @@
 				104320EA23034EF400A19F3C /* StoryboardLoadedViewController.swift in Sources */,
 				104320F22303568700A19F3C /* LoginCoordinator.swift in Sources */,
 				104320EC23034F3200A19F3C /* ViewModel.swift in Sources */,
+				1043210123035F2500A19F3C /* WelcomeViewController.swift in Sources */,
 				104320F4230356AB00A19F3C /* LoginViewController.swift in Sources */,
 				104320E523034ADD00A19F3C /* Coordinator.swift in Sources */,
 			);

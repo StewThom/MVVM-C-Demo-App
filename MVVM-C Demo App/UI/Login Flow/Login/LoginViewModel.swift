@@ -25,6 +25,6 @@ class LoginViewModel: ViewModel {
             return
         }
         
-        coordinator?.dismiss()
+        coordinator?.transition(LoginTransitionRef.Welcome(username: username))
     }
 }

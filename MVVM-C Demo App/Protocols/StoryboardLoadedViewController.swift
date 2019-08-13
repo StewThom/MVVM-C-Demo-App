@@ -9,16 +9,18 @@
 import UIKit
 
 protocol StoryboardLoadedViewController: ModeledViewController {
-    static func instantiateFromStoryboard(storyboard: StoryboardRef, with viewModel: ViewModel) -> Self
+    static func instantiateFromStoryboard(storyboard: StoryboardRef, with viewModel: ViewModel, coordinator: Coordinator?) -> Self
 }
 
 extension StoryboardLoadedViewController {
-    static func instantiateFromStoryboard(storyboard: StoryboardRef, with viewModel: ViewModel) -> Self {
+    
+    static func instantiateFromStoryboard(storyboard: StoryboardRef, with viewModel: ViewModel, coordinator: Coordinator? = nil) -> Self {
         let className = NSStringFromClass(self).components(separatedBy: ".")[1]
         let storyboard = UIStoryboard(name: storyboard.rawValue, bundle: Bundle.main)
         let vc = storyboard.instantiateViewController(withIdentifier: className) as! Self
         vc.viewModel = (viewModel as! Self.AnyViewModel)
         vc.setAsDelegate(for: viewModel)
+        viewModel.coordinator = coordinator
         return vc
     }
 }
