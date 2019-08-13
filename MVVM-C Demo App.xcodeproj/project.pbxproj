@@ -12,7 +12,6 @@
 		104320B5230349EA00A19F3C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104320B3230349EA00A19F3C /* Home.storyboard */; };
 		104320B7230349EB00A19F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 104320B6230349EB00A19F3C /* Assets.xcassets */; };
 		104320BA230349EB00A19F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104320B8230349EB00A19F3C /* LaunchScreen.storyboard */; };
-		104320C5230349EB00A19F3C /* MVVM_C_Demo_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104320C4230349EB00A19F3C /* MVVM_C_Demo_AppTests.swift */; };
 		104320D0230349EB00A19F3C /* MVVM_C_Demo_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104320CF230349EB00A19F3C /* MVVM_C_Demo_AppUITests.swift */; };
 		104320E523034ADD00A19F3C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104320E423034ADD00A19F3C /* Coordinator.swift */; };
 		104320E823034D1200A19F3C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104320E723034D1200A19F3C /* AppCoordinator.swift */; };
@@ -27,6 +26,7 @@
 		104320FB23035A7B00A19F3C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 104320FD23035A7B00A19F3C /* Localizable.strings */; };
 		1043210123035F2500A19F3C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043210023035F2500A19F3C /* WelcomeViewController.swift */; };
 		1043210323035F3A00A19F3C /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1043210223035F3A00A19F3C /* WelcomeViewModel.swift */; };
+		104321062303661D00A19F3C /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104321052303661D00A19F3C /* CoordinatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,6 @@
 		104320B9230349EB00A19F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		104320BB230349EB00A19F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		104320C0230349EB00A19F3C /* MVVM-C Demo AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM-C Demo AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		104320C4230349EB00A19F3C /* MVVM_C_Demo_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_C_Demo_AppTests.swift; sourceTree = "<group>"; };
 		104320C6230349EB00A19F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		104320CB230349EB00A19F3C /* MVVM-C Demo AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM-C Demo AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		104320CF230349EB00A19F3C /* MVVM_C_Demo_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_C_Demo_AppUITests.swift; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		104320FC23035A7B00A19F3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1043210023035F2500A19F3C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		1043210223035F3A00A19F3C /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		104321052303661D00A19F3C /* CoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +136,7 @@
 		104320C3230349EB00A19F3C /* MVVM-C Demo AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				104320C4230349EB00A19F3C /* MVVM_C_Demo_AppTests.swift */,
+				104321042303661D00A19F3C /* Coordinator Tests */,
 				104320C6230349EB00A19F3C /* Info.plist */,
 			);
 			path = "MVVM-C Demo AppTests";
@@ -242,6 +242,14 @@
 				1043210223035F3A00A19F3C /* WelcomeViewModel.swift */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		104321042303661D00A19F3C /* Coordinator Tests */ = {
+			isa = PBXGroup;
+			children = (
+				104321052303661D00A19F3C /* CoordinatorTests.swift */,
+			);
+			path = "Coordinator Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,7 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				104320C5230349EB00A19F3C /* MVVM_C_Demo_AppTests.swift in Sources */,
+				104321062303661D00A19F3C /* CoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
